@@ -1,0 +1,5 @@
+black
+ipdb
+pylint
+pytest
+pytest-runner
