@@ -3,7 +3,7 @@ from starlette.applications import Starlette
 from starlette.middleware.httpsredirect import HTTPSRedirectMiddleware
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
-
+from example.database import check_database_created
 from example.routes import router
 
 DEBUG = True  # TODO: Switch to environment variable!
@@ -32,6 +32,7 @@ def apply_middleware(app):
             app.add_middleware(middleware)
 
 
+check_database_created()
 app = Starlette()
 app.mount("", router)
 app.debug = ACTIVE_CONFIG.get("DEBUG")

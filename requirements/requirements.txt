@@ -1,3 +1,6 @@
+alembic
+databases[postgresql]
+graphene
+sqlalchemy-utils
 starlette
 uvicorn
-graphene
