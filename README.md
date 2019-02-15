@@ -7,7 +7,7 @@ Async webframework test with GraphQL
 ```
 pyenv install 3.7.2
 git clone git@github.com:djstein/starlette-test.git
-cd startlette-test
+cd starlette-test
 virtualenv .venv
 source .venv/bin/activate
 pip install -Ur requirements/requirements.txt
@@ -44,11 +44,13 @@ http://0.0.0.0:8000/graph/v1/
 Create initial migrations
 
 ```
+cd example/
 alembic revision --autogenerate -m "initial"
 ```
 
 Run migrations
 
 ```
+cd example/
 alembic upgrade head
 ```
