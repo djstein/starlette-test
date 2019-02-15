@@ -7,4 +7,4 @@ def check_database_created(database_uri="postgres://localhost/startlette"):
     if not database_exists(engine.url):
         print(f"Database {database_uri} not found, creating...")
         create_database(engine.url)
-    print(f"Database {database_exists(engine.url)} found")
+    print(f"Database {database_uri} found: {database_exists(engine.url)}")

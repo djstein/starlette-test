@@ -40,3 +40,15 @@ http://0.0.0.0:8000/graph/v1/
     hello(name: "Reico")
 }
 ```
+
+Create initial migrations
+
+```
+alembic revision --autogenerate -m "initial"
+```
+
+Run migrations
+
+```
+alembic upgrade head
+```
